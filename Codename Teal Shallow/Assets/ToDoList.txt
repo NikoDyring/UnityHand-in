@@ -1,0 +1,43 @@
+## Top Down Shooter
+Features
+- Zombie AI
+- Upgradeable House
+    - Barricades
+    - Guard
+    - More health
+- 2D Movement
+    - WASD Controls
+    - Shoot at Cursor
+- 3 Guns
+    - Shotgun
+    - Pistol
+    - Machinegun
+
+Sound
+KenneyNL Assets
+
+
+TODO
+Programming
+- Add Movement to Player.
+- Implement Dummy Targets
+- Implement Shooting, Ammo & Reloading.
+- Implement Damage.
+- Implement New Gun.
+- Implement AI to Dummy Targets.
+- Implement Health on building
+- Implement Repair-tool
+
+NICE-TO-HAVE
+- Options functionality (Keybindings, volume slider, sensitivity)
+
+UI
+- Ammo
+- Health
+- Lurkers left
+
+Sounds
+- Player Quotes
+- Gun Sounds
+- Impacts
+- Zombie Sounds
