@@ -1,12 +1,16 @@
 ## Top Down Shooter
 Features
 - Zombie AI
-- Upgradeable House
+- One level L4Dlike?
+    - Safehouse to rearm
+    - Extraction @ smoke or some fancy stuff?
+- Upgradeable House?
     - Barricades
     - Guard
     - More health
 - 2D Movement
-    - WASD Controls
+    - WASD Controls ✓
+    - Look at Cursor ✓
     - Shoot at Cursor
 - 3 Guns
     - Shotgun
@@ -14,12 +18,12 @@ Features
     - Machinegun
 
 Sound
-KenneyNL Assets
+KenneyNL Assets ✓
 
 
 TODO
 Programming
-- Add Movement to Player.
+- Add Movement to Player. ✓
 - Implement Dummy Targets
 - Implement Shooting, Ammo & Reloading.
 - Implement Damage.
