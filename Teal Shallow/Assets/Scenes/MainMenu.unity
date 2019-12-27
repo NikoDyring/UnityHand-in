@@ -372,6 +372,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1703203309 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2747542714071818788, guid: f81621e702599c04280b7edc38b00763,
+    type: 3}
+  m_PrefabInstance: {fileID: 2747542715814397990}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1703203310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703203309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d4a10cc46254747a15e863ff04c8e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  optionsWindow: {fileID: 0}
+  mainWindow: {fileID: 0}
 --- !u!1001 &2747542715814397990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -545,6 +565,66 @@ PrefabInstance:
       value: SaveOptions
       objectReference: {fileID: 0}
     - target: {fileID: 434326904236238915, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542713867302846, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542713867302846, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542713867302846, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542713867302846, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1703203310}
+    - target: {fileID: 2747542713867302846, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542713867302846, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542714609247528, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542714609247528, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542714609247528, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542714609247528, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1703203310}
+    - target: {fileID: 2747542714609247528, guid: f81621e702599c04280b7edc38b00763,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747542714609247528, guid: f81621e702599c04280b7edc38b00763,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
