@@ -5,14 +5,51 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float moveSpeed = 5f;
+    
     public Rigidbody2D playerRB;
+    
+    [SerializeField]
+    private SpriteRenderer playerSprite;
+    
+    [SerializeField]
+    private Sprite[] gunSprites;
+    
     Vector2 movement;
+    Vector2 mousePos;
 
-    // Update is called once per frame
+    private Weapon weapon;
+    void Start()
+    {
+        weapon = gameObject.GetComponent<Weapon>();
+    }
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if(Input.GetButtonDown("Fire1"))
+        {
+            weapon.FireWeapon();
+        }
+
+        if(Input.GetButtonDown("SwapToPistol"))
+        {
+            weapon.SwapWeapon(1);
+            playerSprite.sprite = gunSprites[0];
+        }
+
+        if(Input.GetButtonDown("SwapToShotgun"))
+        {
+            weapon.SwapWeapon(2);
+            playerSprite.sprite = gunSprites[1];
+        }
+
+        if(Input.GetButtonDown("SwapToSMG"))
+        {
+            weapon.SwapWeapon(3);
+            playerSprite.sprite = gunSprites[2];
+        }
 
         FaceMouse();
     }

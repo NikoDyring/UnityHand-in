@@ -13,11 +13,10 @@ Features
     - Look at Cursor ✓
     - Shoot at Cursor
 - 3 Guns
-    - Shotgun
     - Pistol
+    - Shotgun
     - Machinegun
 
-Sound
 KenneyNL Assets ✓
 
 
@@ -43,5 +42,8 @@ UI
 Sounds
 - Player Quotes
 - Gun Sounds
+    - Gun Cocking ✓
+    - Gun Shots
+    - Gun Reloads
 - Impacts
 - Zombie Sounds
