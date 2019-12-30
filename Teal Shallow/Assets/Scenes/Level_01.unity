@@ -11229,8 +11229,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6601395787553374601, guid: c3d701d604719bd49b8b1e908691c7af,
         type: 3}
-      propertyPath: gunSounds.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: a26f39928bf57124f98a7de4d53d2de8, type: 3}
+      propertyPath: fireRate
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d701d604719bd49b8b1e908691c7af, type: 3}

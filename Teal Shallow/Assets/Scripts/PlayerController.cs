@@ -28,26 +28,19 @@ public class PlayerController : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        if(Input.GetButtonDown("Fire1"))
-        {
-            weapon.FireWeapon();
-        }
 
         if(Input.GetButtonDown("SwapToPistol"))
         {
-            weapon.SwapWeapon(1);
             playerSprite.sprite = gunSprites[0];
         }
 
         if(Input.GetButtonDown("SwapToShotgun"))
         {
-            weapon.SwapWeapon(2);
             playerSprite.sprite = gunSprites[1];
         }
 
         if(Input.GetButtonDown("SwapToSMG"))
         {
-            weapon.SwapWeapon(3);
             playerSprite.sprite = gunSprites[2];
         }
 
