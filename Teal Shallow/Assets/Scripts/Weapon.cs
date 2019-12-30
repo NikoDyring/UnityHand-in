@@ -12,6 +12,8 @@ public class Weapon : MonoBehaviour
     private AudioSource audio;
     [SerializeField]
     private AudioClip[] gunCocks;
+    [SerializeField]
+    private AudioClip[] gunSounds;
 
     public Transform muzzleEnd;
     public GameObject bulletPrefab;
@@ -23,18 +25,21 @@ public class Weapon : MonoBehaviour
         switch(Type)
             {
                 case 1:
-                    // Play Pistol Sound
-                    Debug.Log("Pistol PEW!");
+                    audio.clip = gunSounds[0];
+                    audio.Play();
                     GameObject bullet = Instantiate(bulletPrefab, muzzleEnd.position, muzzleEnd.rotation);
                     Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
                     rb.AddForce(muzzleEnd.up * bulletForce, ForceMode2D.Impulse);
                     break;
                 case 2:
-                    // Play Shotgun Sound
+                    audio.clip = gunSounds[1];
+                    audio.Play();
                     Debug.Log("Shotgun PEW!");
                     break;
                 case 3:
-                    // Play SMG Sound
+                    audio.clip = gunSounds[2];
+                    audio.Play();
+                    audio.volume = .7f;
                     Debug.Log("SMG PEW!");
                     break;
             }

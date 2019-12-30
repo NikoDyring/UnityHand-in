@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayerID: 1586116749
   m_SortingLayer: 5
   m_SortingOrder: 2
-  m_Sprite: {fileID: -7387945925565900092, guid: 04c441f3d2ad9e448b68b3effde8d64d,
+  m_Sprite: {fileID: 5955748402571542897, guid: 04c441f3d2ad9e448b68b3effde8d64d,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -268,6 +268,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e10995db7014ff341a104fed356ffa05, type: 3}
   - {fileID: 8300000, guid: a0817c8bac0a448498b7b8e4d1a4b95d, type: 3}
   - {fileID: 8300000, guid: 5d3d88c9b93743e4381b052101285237, type: 3}
+  gunSounds:
+  - {fileID: 8300000, guid: 4ec4185088c8fd94881bda5cf07b28cf, type: 3}
+  - {fileID: 8300000, guid: c30ec4d60307f40459a31abdedc7a7e9, type: 3}
+  - {fileID: 8300000, guid: a26f39928bf57124f98a7de4d53d2de8, type: 3}
   muzzleEnd: {fileID: 467689847}
   bulletPrefab: {fileID: 7458788828568733551, guid: ae6f75478b19a044394eb92f8e1fb3e9,
     type: 3}

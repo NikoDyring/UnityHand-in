@@ -11227,11 +11227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6828354274056971905, guid: c3d701d604719bd49b8b1e908691c7af,
+    - target: {fileID: 6601395787553374601, guid: c3d701d604719bd49b8b1e908691c7af,
         type: 3}
-      propertyPath: m_Sprite
+      propertyPath: gunSounds.Array.data[2]
       value: 
-      objectReference: {fileID: 5955748402571542897, guid: 04c441f3d2ad9e448b68b3effde8d64d,
-        type: 3}
+      objectReference: {fileID: 8300000, guid: a26f39928bf57124f98a7de4d53d2de8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3d701d604719bd49b8b1e908691c7af, type: 3}
