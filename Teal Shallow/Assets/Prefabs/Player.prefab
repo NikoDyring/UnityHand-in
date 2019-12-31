@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0935496d9378df84f9ed432d744ea42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  currentHealth: 0
+  maxHealth: 100
+  currentHealth: 100
   playerRB: {fileID: 6828354274056971919}
   weaponController: {fileID: 6601395787553374601}
   playerModel: {fileID: 6828354274056971905}

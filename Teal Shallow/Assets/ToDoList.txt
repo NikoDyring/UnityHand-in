@@ -35,7 +35,7 @@ NICE-TO-HAVE
 
 UI
 - Ammo ✓
-- Health
+- Health ✓
 - Lurkers left
 
 Sounds

@@ -6,19 +6,29 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public WeaponController player;
-
+    [Header("Weapon UI")]
+    public WeaponController weapon;
     public TextMeshProUGUI weaponNameText;
     public TextMeshProUGUI weaponCurrentAmmoText;
     public TextMeshProUGUI weaponMaxAmmoText;
     public Image weaponImage;
 
+    [Header("Health UI")]
+    public PlayerController player;
+    public TextMeshProUGUI healthText;
+
     void Update()
     {
-        weaponNameText.text = player.currentWeapon.name;
-        weaponCurrentAmmoText.text = player.currentWeapon.currentAmmo.ToString();
-        weaponMaxAmmoText.text = player.currentWeapon.maxAmmo.ToString();
-        weaponImage.sprite = player.currentWeapon.weaponImage;
+        // Weapon Hud
+        weaponNameText.text = weapon.currentWeapon.name;
+        weaponCurrentAmmoText.text = weapon.currentWeapon.currentAmmo.ToString();
+        weaponMaxAmmoText.text = weapon.currentWeapon.maxAmmo.ToString();
+        weaponImage.sprite = weapon.currentWeapon.weaponImage;
+
+        // Health Hud
+        healthText.text = player.currentHealth.ToString();
+
+
     }
 
 }

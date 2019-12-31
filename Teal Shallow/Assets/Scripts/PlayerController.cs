@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Health Settings")]
     public int maxHealth;
     public int currentHealth;
-    private float moveSpeed = 5f;
+    
+
+    [Header("Player Settings")]
     public Rigidbody2D playerRB;
     public WeaponController weaponController;
 
@@ -15,9 +18,11 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private Sprite[] playerSprites;
-
-    Vector2 movement;
-    Vector2 mousePos;
+    
+    private Sprite currentSprite;
+    private float moveSpeed = 5f;
+    private Vector2 movement;
+    private Vector3 mousePos;
 
     void Start()
     {
@@ -46,11 +51,9 @@ public class PlayerController : MonoBehaviour
             playerModel.sprite = playerSprites[2];
         }
 
-        if (Input.GetButtonDown("Reload"))
+        if (Input.GetButtonDown("Reload") && weaponController.currentWeapon.currentAmmo != weaponController.currentWeapon.maxAmmo)
         {
-            playerModel.sprite = playerSprites[3];
-            WaitForReload();
-            
+            StartCoroutine(WaitForReload());
         }
 
 
@@ -64,7 +67,7 @@ public class PlayerController : MonoBehaviour
 
     void FaceMouse()
     {
-        Vector3 mousePos = Input.mousePosition;
+        mousePos = Input.mousePosition;
         mousePos.z = 5.23f;
 
         Vector3 objectPos = Camera.main.WorldToScreenPoint(transform.position);
@@ -77,6 +80,9 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator WaitForReload()
     {
+        currentSprite = playerModel.sprite;
+        playerModel.sprite = playerSprites[3];
         yield return new WaitForSeconds(weaponController.currentWeapon.reloadTime);
+        playerModel.sprite = currentSprite;
     }
 }
