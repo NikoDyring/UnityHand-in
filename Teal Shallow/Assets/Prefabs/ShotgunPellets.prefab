@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 682161612146723872}
   - component: {fileID: 1172968105245065913}
   - component: {fileID: 1350944781852140634}
+  - component: {fileID: 9174599085778371315}
   m_Layer: 0
   m_Name: Pellet(2)
   m_TagString: Untagged
@@ -97,6 +98,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.080000006, y: 0.26}
   m_Direction: 0
+--- !u!114 &9174599085778371315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2267173723920594139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d0a971f62d06f41a667d878207a336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &3421144520522190040
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,6 +122,7 @@ GameObject:
   - component: {fileID: 4278915517869746399}
   - component: {fileID: 6289568826125227707}
   - component: {fileID: 5808983632718693085}
+  - component: {fileID: 6353440760626291789}
   m_Layer: 0
   m_Name: Pellet(1)
   m_TagString: Untagged
@@ -194,6 +209,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.08, y: 0.25999996}
   m_Direction: 0
+--- !u!114 &6353440760626291789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421144520522190040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d0a971f62d06f41a667d878207a336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &7781974896328501089
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +288,7 @@ GameObject:
   - component: {fileID: 1071877480238426932}
   - component: {fileID: 1925517314298690119}
   - component: {fileID: 2623438822047578767}
+  - component: {fileID: 8068301073586299114}
   m_Layer: 0
   m_Name: Pellet(3)
   m_TagString: Untagged
@@ -346,3 +375,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.08, y: 0.25999996}
   m_Direction: 0
+--- !u!114 &8068301073586299114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870722976669370507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08d0a971f62d06f41a667d878207a336, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0

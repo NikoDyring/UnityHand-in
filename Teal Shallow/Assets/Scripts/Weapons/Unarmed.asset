@@ -20,3 +20,5 @@ MonoBehaviour:
   cockingSound: {fileID: 0}
   shotSound: {fileID: 0}
   reloadSound: {fileID: 0}
+  bulletPrefab: {fileID: 0}
+  weaponImage: {fileID: 21300000, guid: cd39f14f5da68124b90d34c3edb82414, type: 3}

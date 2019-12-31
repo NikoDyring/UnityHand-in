@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public int Type { get; set; }
+    public Weapon PlayerWeapon {get;set;}
     public bool IsReloading { get; set; }
 
     [SerializeField]
@@ -24,9 +24,9 @@ public class WeaponController : MonoBehaviour
 
     void Start()
     {
-        weapons[0].currentAmmo = 8;
-        weapons[1].currentAmmo = 6;
-        weapons[2].currentAmmo = 30;
+        weapons[0].currentAmmo = weapons[0].maxAmmo;
+        weapons[1].currentAmmo = weapons[1].maxAmmo;
+        weapons[2].currentAmmo = weapons[2].maxAmmo;
     }
 
 
@@ -90,7 +90,7 @@ public class WeaponController : MonoBehaviour
 
     public void Reload(Weapon weapon)
     {
-        if (IsReloading)
+        if (IsReloading || weapon.currentAmmo == weapon.maxAmmo)
             return;
 
         switch (weapon.id)
@@ -121,10 +121,11 @@ public class WeaponController : MonoBehaviour
         switch (currentWeapon.id)
         {
             case 1:
-                currentWeapon.currentAmmo = 7;
+                currentWeapon.currentAmmo = 8;
                 break;
             case 2:
-                currentWeapon.currentAmmo = 6;
+                if(currentWeapon.currentAmmo >= 0 && currentWeapon.currentAmmo <= 5)
+                currentWeapon.currentAmmo++;
                 break;
             case 3:
                 currentWeapon.currentAmmo = 30;

@@ -15,4 +15,6 @@ public class Weapon : ScriptableObject
     public AudioClip shotSound;
     public AudioClip reloadSound;
     public GameObject bulletPrefab;
+
+    public Sprite weaponImage;
 }
