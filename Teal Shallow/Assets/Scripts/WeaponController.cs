@@ -66,20 +66,20 @@ public class WeaponController : MonoBehaviour
         {
             switch (weapon.id)
             {
+                // Pistol
                 case 1:
-                    Debug.Log("Pistol Equipped.");
                     audio.clip = weapon.cockingSound;
                     audio.Play();
                     currentWeapon = weapon;
                     break;
+                // Shotgun
                 case 2:
-                    Debug.Log("Shotgun Equipped.");
                     audio.clip = weapon.cockingSound;
                     audio.Play();
                     currentWeapon = weapon;
                     break;
+                // SMG
                 case 3:
-                    Debug.Log("SMG Equipped.");
                     audio.clip = weapon.cockingSound;
                     audio.Play();
                     currentWeapon = weapon;
@@ -115,7 +115,6 @@ public class WeaponController : MonoBehaviour
     IEnumerator ReloadCoroutine()
     {
         IsReloading = true;
-        Debug.Log("Reloading...");
         yield return new WaitForSeconds(currentWeapon.reloadTime);
 
         switch (currentWeapon.id)
@@ -132,7 +131,6 @@ public class WeaponController : MonoBehaviour
                 break;
         }
         IsReloading = false;
-        Debug.Log("Done Reloading");
     }
 
     void Update()

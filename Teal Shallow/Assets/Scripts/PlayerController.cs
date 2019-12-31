@@ -4,18 +4,26 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int maxHealth;
+    public int currentHealth;
     private float moveSpeed = 5f;
-
     public Rigidbody2D playerRB;
+    public WeaponController weaponController;
 
     [SerializeField]
-    private SpriteRenderer playerSprite;
+    private SpriteRenderer playerModel;
 
     [SerializeField]
     private Sprite[] playerSprites;
 
     Vector2 movement;
     Vector2 mousePos;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        weaponController = GetComponent<WeaponController>();
+    }
 
     void Update()
     {
@@ -25,22 +33,24 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("SwapToPistol"))
         {
-            playerSprite.sprite = playerSprites[0];
+            playerModel.sprite = playerSprites[0];
         }
 
         if (Input.GetButtonDown("SwapToShotgun"))
         {
-            playerSprite.sprite = playerSprites[1];
+            playerModel.sprite = playerSprites[1];
         }
 
         if (Input.GetButtonDown("SwapToSMG"))
         {
-            playerSprite.sprite = playerSprites[2];
+            playerModel.sprite = playerSprites[2];
         }
 
         if (Input.GetButtonDown("Reload"))
         {
-            // TODO: Add ReloadSprite
+            playerModel.sprite = playerSprites[3];
+            WaitForReload();
+            
         }
 
 
@@ -63,5 +73,10 @@ public class PlayerController : MonoBehaviour
 
         float angle = Mathf.Atan2(mousePos.y, mousePos.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+    }
+
+    IEnumerator WaitForReload()
+    {
+        yield return new WaitForSeconds(weaponController.currentWeapon.reloadTime);
     }
 }

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467689846}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.237, y: -0.097, z: 0}
+  m_LocalPosition: {x: 0.314, y: -0.097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6828354274056971904}
@@ -149,8 +149,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0935496d9378df84f9ed432d744ea42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
+  currentHealth: 0
   playerRB: {fileID: 6828354274056971919}
-  playerSprite: {fileID: 6828354274056971905}
+  weaponController: {fileID: 6601395787553374601}
+  playerModel: {fileID: 6828354274056971905}
   playerSprites:
   - {fileID: -7387945925565900092, guid: 04c441f3d2ad9e448b68b3effde8d64d, type: 3}
   - {fileID: 1516127635739607740, guid: 04c441f3d2ad9e448b68b3effde8d64d, type: 3}
@@ -266,14 +269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio: {fileID: 348893596}
   muzzleEnd: {fileID: 467689847}
-  bulletPrefab: {fileID: 7458788828568733551, guid: ae6f75478b19a044394eb92f8e1fb3e9,
-    type: 3}
   bulletForce: 20
-  fireRate: 70
   nextShot: 0
-  reloadTime: 2
-  currentAmmo: 0
-  maxAmmo: 0
   currentWeapon: {fileID: 11400000, guid: ee4599a0a2f96104081ce9967d64f9d8, type: 2}
   weapons:
   - {fileID: 11400000, guid: d3ecbca238e3bbd4bbd20d73cdcd584f, type: 2}
