@@ -10,12 +10,6 @@ public class EnemyController : MonoBehaviour
 
     public float speed;
 
-
-
-    public SpriteRenderer enemySprite;
-    public Sprite[] spriteVariations;
-    public Sprite[] motionSprite;
-
     private Animator anim;
     private Transform target;
 
@@ -43,6 +37,11 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("isMoving", isMoving);
         transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
 
+        LookAtPlayer();
+    }
+
+    void LookAtPlayer()
+    {
         // Get the angle
         Vector3 norTar = (target.position - transform.position).normalized;
         float angle = Mathf.Atan2(norTar.y, norTar.x) * Mathf.Rad2Deg;
@@ -51,7 +50,6 @@ public class EnemyController : MonoBehaviour
         Quaternion rotation = new Quaternion();
         rotation.eulerAngles = new Vector3(0, 0, angle);
         transform.rotation = rotation;
-
-
     }
+
 }

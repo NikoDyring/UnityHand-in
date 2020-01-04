@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [Header("Health Settings")]
+    
     public int maxHealth;
     public int currentHealth;
     
@@ -65,6 +66,9 @@ public class PlayerController : MonoBehaviour
         playerRB.MovePosition(playerRB.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
+    /// <summary>
+    /// Makes the player face the mouse.
+    /// </summary>
     void FaceMouse()
     {
         mousePos = Input.mousePosition;

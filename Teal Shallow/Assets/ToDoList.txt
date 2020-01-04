@@ -26,7 +26,7 @@ Programming
 - Implement Dummy Targets ✓
 - Implement Shooting, Ammo & Reloading. ✓
 - Implement Damage.
-- Implement AI to Dummy Targets.
+- Implement AI to Dummy Targets. ✓
 - Implement Health on building
 - Implement Repair-tool
 

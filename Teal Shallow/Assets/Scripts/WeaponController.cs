@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class WeaponController : MonoBehaviour
 {
-    public Weapon PlayerWeapon {get;set;}
     public bool IsReloading { get; set; }
 
     [SerializeField]
@@ -16,9 +15,7 @@ public class WeaponController : MonoBehaviour
 
     public Weapon currentWeapon;
     public Weapon[] weapons;
-
-
-
+    
     private GameObject bullet;
     private Rigidbody2D rb2d;
 
@@ -29,7 +26,10 @@ public class WeaponController : MonoBehaviour
         weapons[2].currentAmmo = weapons[2].maxAmmo;
     }
 
-
+    /// <summary>
+    /// Shoots the weapon
+    /// </summary>
+    /// <param name="weapon">Weapon to fire</param>
     public void FireWeapon(Weapon weapon)
     {
         nextShot = Time.time + 1f / weapon.fireRate;
@@ -60,6 +60,10 @@ public class WeaponController : MonoBehaviour
         weapon.currentAmmo -= 1;
     }
 
+    /// <summary>
+    /// Swaps weapon and plays cocking sound.
+    /// </summary>
+    /// <param name="weapon">Weapon to swap to</param>
     public void SwapWeapon(Weapon weapon)
     {
         if (currentWeapon.id != weapon.id)
@@ -88,6 +92,10 @@ public class WeaponController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Plays the given weapons sound and reloads.
+    /// </summary>
+    /// <param name="weapon">Weapon to reload & play reload sound.</param>
     public void Reload(Weapon weapon)
     {
         if (IsReloading || weapon.currentAmmo == weapon.maxAmmo)
@@ -123,8 +131,8 @@ public class WeaponController : MonoBehaviour
                 currentWeapon.currentAmmo = 8;
                 break;
             case 2:
-                if(currentWeapon.currentAmmo >= 0 && currentWeapon.currentAmmo <= 5)
-                currentWeapon.currentAmmo++;
+                if (currentWeapon.currentAmmo >= 0 && currentWeapon.currentAmmo <= 5)
+                    currentWeapon.currentAmmo++;
                 break;
             case 3:
                 currentWeapon.currentAmmo = 30;
