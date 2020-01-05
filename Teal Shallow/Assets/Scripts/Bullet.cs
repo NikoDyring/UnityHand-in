@@ -1,22 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Assets.Scripts;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
+    
     public int damage;
+    public GameObject bloodPrefab;
+    public WeaponController weapon;
 
-    void Start()
+    private void Start()
     {
+        weapon = GameObject.FindWithTag("Player").GetComponent<WeaponController>();
+        damage = weapon.currentWeapon.damage;
         StartCoroutine(CleanUp());
     }
 
-    void OnCollisionEnter2D(Collision2D col2d)
+    private void OnCollisionEnter2D(Collision2D col2d)
     {
-        Debug.Log(col2d.gameObject);
         if(col2d.gameObject.tag == "Enemy")
-        { 
+        {
+            var contact = col2d.contacts[0];
+            var rot = Quaternion.FromToRotation(Vector3.up, contact.normal);
+            Instantiate(bloodPrefab, contact.point, rot);
             Destroy(gameObject);
         }
 
@@ -28,5 +35,8 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }
+
+
+
 
 }

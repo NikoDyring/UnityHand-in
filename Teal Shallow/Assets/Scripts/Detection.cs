@@ -6,12 +6,19 @@ namespace Assets.Scripts
     {
         public EnemyController enemyController;
 
-        void OnTriggerStay2D(Collider2D collider)
+        void OnTriggerStay2D(Collider2D col2d)
         {
-            if (collider.gameObject.tag == "Player")
+            if (col2d.gameObject.tag == "Player")
             {
-                enemyController.LookAtPlayer();
-                enemyController.ChasePlayer();
+                enemyController.chasePlayer = true;
+            }
+        }
+
+        void OnTriggerExit2D(Collider2D col2d)
+        {
+            if (col2d.gameObject.tag == "Player")
+            {
+                enemyController.chasePlayer = false;
             }
         }
 

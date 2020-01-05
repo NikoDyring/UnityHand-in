@@ -15,11 +15,12 @@ MonoBehaviour:
   id: 2
   fireRate: 1
   reloadTime: 0.3
-  currentAmmo: 2
+  currentAmmo: 0
   maxAmmo: 6
+  weaponImage: {fileID: 21300000, guid: 94c358305d6986947a9d1dd10cec36e7, type: 3}
   cockingSound: {fileID: 8300000, guid: 037a31b4192228e4fa32fd10b1e50b77, type: 3}
   shotSound: {fileID: 8300000, guid: eb0fdfc0c726c284bb8c69a22b51639d, type: 3}
   reloadSound: {fileID: 8300000, guid: 38a5fe29543364943851554cbbee6108, type: 3}
   bulletPrefab: {fileID: 7781974896328501089, guid: 0d75789b725ff9c4c86d1bb07ca69e23,
     type: 3}
-  weaponImage: {fileID: 21300000, guid: 94c358305d6986947a9d1dd10cec36e7, type: 3}
+  damage: 34

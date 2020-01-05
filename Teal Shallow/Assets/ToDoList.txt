@@ -1,13 +1,6 @@
 ## Top Down Shooter
 Features
 - Zombie AI ✓
-- One level L4Dlike?
-    - Safehouse to rearm
-    - Extraction @ smoke or some fancy stuff?
-- Upgradeable House?
-    - Barricades
-    - Guard
-    - More health
 - 2D Movement
     - WASD Controls ✓
     - Look at Cursor ✓
@@ -27,8 +20,6 @@ Programming
 - Implement Shooting, Ammo & Reloading. ✓
 - Implement Damage.
 - Implement AI to Dummy Targets. ✓
-- Implement Health on building
-- Implement Repair-tool
 
 NICE-TO-HAVE
 - Options functionality (Keybindings, volume slider, sensitivity?)
@@ -36,7 +27,7 @@ NICE-TO-HAVE
 UI
 - Ammo ✓
 - Health ✓
-- Lurkers left
+- Fish Food Counter ✓
 
 Sounds
 - Player Quotes
@@ -44,5 +35,5 @@ Sounds
     - Gun Cocking ✓
     - Gun Shots ✓
     - Gun Reloads ✓
-- Impacts
+- Impacts ✓
 - Zombie Sounds

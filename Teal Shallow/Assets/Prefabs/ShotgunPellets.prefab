@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  bloodPrefab: {fileID: 3071649594536283888, guid: ea88bbf2e3e08fd4a9092ae90646220b,
+    type: 3}
 --- !u!1 &3421144520522190040
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +224,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  bloodPrefab: {fileID: 3071649594536283888, guid: ea88bbf2e3e08fd4a9092ae90646220b,
+    type: 3}
 --- !u!1 &7781974896328501089
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,3 +392,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 0
+  bloodPrefab: {fileID: 3071649594536283888, guid: ea88bbf2e3e08fd4a9092ae90646220b,
+    type: 3}
