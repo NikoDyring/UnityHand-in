@@ -12,17 +12,18 @@ public class Bullet : MonoBehaviour
         StartCoroutine(CleanUp());
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D col2d)
     {
-        Debug.Log(collision.gameObject);
-        if(collision.gameObject.tag == "Enemy")
-        {
+        Debug.Log(col2d.gameObject);
+        if(col2d.gameObject.tag == "Enemy")
+        { 
             Destroy(gameObject);
         }
+
         Destroy(gameObject);
     }
 
-    IEnumerator CleanUp()
+    private IEnumerator CleanUp()
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);

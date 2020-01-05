@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SMG
   m_EditorClassIdentifier: 
   id: 3
-  fireRate: 10
+  fireRate: 8
   reloadTime: 2.4
-  currentAmmo: 25
+  currentAmmo: 0
   maxAmmo: 30
   cockingSound: {fileID: 8300000, guid: 5d3d88c9b93743e4381b052101285237, type: 3}
   shotSound: {fileID: 8300000, guid: a26f39928bf57124f98a7de4d53d2de8, type: 3}

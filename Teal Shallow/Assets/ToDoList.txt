@@ -1,6 +1,6 @@
 ## Top Down Shooter
 Features
-- Zombie AI
+- Zombie AI ✓
 - One level L4Dlike?
     - Safehouse to rearm
     - Extraction @ smoke or some fancy stuff?

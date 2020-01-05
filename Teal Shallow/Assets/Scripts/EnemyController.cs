@@ -1,55 +1,57 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+namespace Assets.Scripts
 {
-
-    public int Health { get; set; }
-    public int CurrentHealth { get; set; }
-
-    public float speed;
-
-    private Animator anim;
-    private Transform target;
-
-    private bool isMoving = false;
-
-
-    void Start()
+    public class EnemyController : MonoBehaviour
     {
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        anim = GetComponent<Animator>();
 
-    }
+        public int Health { get; set; }
+        public int CurrentHealth { get; set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if ((!(Vector2.Distance(transform.position, target.position) > 1)))
+        public float speed;
+        public Animator anim;
+
+        public bool isMoving = false;
+        public Transform target;
+
+
+        void Start()
         {
-            isMoving = false;
-            anim.SetBool("isMoving", isMoving);
-            return;
+            anim = GetComponent<Animator>();
         }
 
-        isMoving = true;
-        anim.SetBool("isMoving", isMoving);
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        // Update is called once per frame
+        void Update()
+        {
 
-        LookAtPlayer();
+        }
+
+        public void LookAtPlayer()
+        {
+            // Get the angle
+            Vector3 norTar = (target.position - transform.position).normalized;
+            var angle = Mathf.Atan2(norTar.y, norTar.x) * Mathf.Rad2Deg;
+
+            // Rotate object to angle
+            Quaternion rotation = new Quaternion { eulerAngles = new Vector3(0, 0, angle) };
+            transform.rotation = rotation;
+        }
+
+        public void ChasePlayer()
+        {
+
+            if ((!(Vector2.Distance(transform.position, target.position) > 1)))
+            {
+                isMoving = false;
+                anim.SetBool("isMoving", isMoving);
+                return;
+            }
+
+            isMoving = true;
+            anim.SetBool("isMoving", isMoving);
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        }
+
+
     }
-
-    void LookAtPlayer()
-    {
-        // Get the angle
-        Vector3 norTar = (target.position - transform.position).normalized;
-        float angle = Mathf.Atan2(norTar.y, norTar.x) * Mathf.Rad2Deg;
-
-        // Rotate object to angle
-        Quaternion rotation = new Quaternion();
-        rotation.eulerAngles = new Vector3(0, 0, angle);
-        transform.rotation = rotation;
-    }
-
 }

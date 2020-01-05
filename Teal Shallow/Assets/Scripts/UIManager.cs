@@ -1,34 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour
+namespace Assets.Scripts
 {
-    [Header("Weapon UI")]
-    public WeaponController weapon;
-    public TextMeshProUGUI weaponNameText;
-    public TextMeshProUGUI weaponCurrentAmmoText;
-    public TextMeshProUGUI weaponMaxAmmoText;
-    public Image weaponImage;
-
-    [Header("Health UI")]
-    public PlayerController player;
-    public TextMeshProUGUI healthText;
-
-    void Update()
+    public class UIManager : MonoBehaviour
     {
-        // Weapon Hud
-        weaponNameText.text = weapon.currentWeapon.name;
-        weaponCurrentAmmoText.text = weapon.currentWeapon.currentAmmo.ToString();
-        weaponMaxAmmoText.text = weapon.currentWeapon.maxAmmo.ToString();
-        weaponImage.sprite = weapon.currentWeapon.weaponImage;
+        [Header("Weapon UI")]
+        public WeaponController weapon;
+        public TextMeshProUGUI weaponNameText;
+        public TextMeshProUGUI weaponCurrentAmmoText;
+        public TextMeshProUGUI weaponMaxAmmoText;
+        public Image weaponImage;
 
-        // Health Hud
-        healthText.text = player.currentHealth.ToString();
+        [Header("Health UI")]
+        public PlayerController player;
+        public TextMeshProUGUI healthText;
 
+        void Update()
+        {
+            // Weapon Hud
+            weaponNameText.text = weapon.currentWeapon.name;
+            weaponCurrentAmmoText.text = weapon.currentWeapon.currentAmmo.ToString();
+            weaponMaxAmmoText.text = weapon.currentWeapon.maxAmmo.ToString();
+            weaponImage.sprite = weapon.currentWeapon.weaponImage;
+
+            // Health Hud
+            healthText.text = player.currentHealth.ToString();
+        }
 
     }
-
 }

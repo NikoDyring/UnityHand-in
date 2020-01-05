@@ -1,47 +1,48 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using  UnityEngine.SceneManagement;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+namespace Assets.Scripts
 {
-    [SerializeField]
-    private GameObject optionsWindow;
-    [SerializeField]
-    private GameObject mainWindow;
-
-    /// <summary>
-    /// Starts the game.
-    /// </summary>
-    public void PlayGame()
+    public class MainMenu : MonoBehaviour
     {
-        SceneManager.LoadScene("Level_01");
-    }
+        [SerializeField]
+        private GameObject optionsWindow;
+        [SerializeField]
+        private GameObject mainWindow;
 
-    /// <summary>
-    /// Opens the option menu.
-    /// </summary>
-    public void OpenOptions()
-    {
-        mainWindow.SetActive(false);
-        optionsWindow.SetActive(true);
-    }
+        /// <summary>
+        /// Starts the game.
+        /// </summary>
+        public void PlayGame()
+        {
+            SceneManager.LoadScene("Level_01");
+        }
 
-    /// <summary>
-    /// Save options by using player preferences.
-    /// </summary>
-    public void SaveOptions()
-    {
-        // TODO: Implement Playerprefs here.
-        optionsWindow.SetActive(false);
-        mainWindow.SetActive(true);
-    }
+        /// <summary>
+        /// Opens the option menu.
+        /// </summary>
+        public void OpenOptions()
+        {
+            mainWindow.SetActive(false);
+            optionsWindow.SetActive(true);
+        }
 
-    /// <summary>
-    /// Quit the game.
-    /// </summary>
-    public void QuitGame()
-    {
-        Application.Quit();
+        /// <summary>
+        /// Save options by using player preferences.
+        /// </summary>
+        public void SaveOptions()
+        {
+            // TODO: Implement Playerprefs here.
+            optionsWindow.SetActive(false);
+            mainWindow.SetActive(true);
+        }
+
+        /// <summary>
+        /// Quit the game.
+        /// </summary>
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
     }
 }

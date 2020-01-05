@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467689846}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.314, y: -0.097, z: 0}
+  m_LocalPosition: {x: 0.218, y: -0.097, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6828354274056971904}
@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 6828354274056971918}
   - component: {fileID: 348893596}
   - component: {fileID: 6601395787553374601}
+  - component: {fileID: 348893601}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -128,7 +129,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 82
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -153,6 +154,7 @@ MonoBehaviour:
   currentHealth: 100
   playerRB: {fileID: 6828354274056971919}
   weaponController: {fileID: 6601395787553374601}
+  moveSpeed: 5
   playerModel: {fileID: 6828354274056971905}
   playerSprites:
   - {fileID: -7387945925565900092, guid: 04c441f3d2ad9e448b68b3effde8d64d, type: 3}
@@ -276,3 +278,29 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3ecbca238e3bbd4bbd20d73cdcd584f, type: 2}
   - {fileID: 11400000, guid: d9a89ec5eed15b44e881e002cc06faef, type: 2}
   - {fileID: 11400000, guid: 212c0a9732c0ce3429ebfbec20d501c8, type: 2}
+--- !u!61 &348893601
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828354274056971906}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: d648cfe8884e2e5448def25885016a0f, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.33, y: 0.43}
+    newSize: {x: 0.33, y: 0.43}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 0.43}
+  m_EdgeRadius: 0

@@ -1,20 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Assets.Scripts
 {
-    public Texture2D cursor;
-
-    public PlayerController player;
-
-    public GameObject tutorialText;
-    // Start is called before the first frame update
-    void Start()
+    public class GameManager : MonoBehaviour
     {
-        Vector2 hotspot = new Vector2(cursor.width / 2, cursor.height / 2);
-        Cursor.SetCursor(cursor, hotspot, CursorMode.Auto);
-    }
+        public Texture2D cursor;
 
+        public PlayerController player;
+
+        public GameObject tutorialText;
+        // Start is called before the first frame update
+        void Start()
+        {
+            Vector2 hotspot = new Vector2(cursor.width / 2, cursor.height / 2);
+            Cursor.SetCursor(cursor, hotspot, CursorMode.Auto);
+        }
+
+    }
 }
