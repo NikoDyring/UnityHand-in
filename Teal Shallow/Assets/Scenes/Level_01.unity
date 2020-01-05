@@ -13986,14 +13986,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 348893598}
-    - target: {fileID: 1003552700, guid: 6d8c1d89af8d4654da8deb0901e8fa33, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1003552701, guid: 6d8c1d89af8d4654da8deb0901e8fa33, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: b67108b241738de4cb95f1c3cd3b5379, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d8c1d89af8d4654da8deb0901e8fa33, type: 3}
 --- !u!1 &1922477052
@@ -15053,6 +15045,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1516127635739607740, guid: 04c441f3d2ad9e448b68b3effde8d64d,
         type: 3}
+    - target: {fileID: 6828354274056971919, guid: c3d701d604719bd49b8b1e908691c7af,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828354274056971919, guid: c3d701d604719bd49b8b1e908691c7af,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 467689847, guid: c3d701d604719bd49b8b1e908691c7af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.2591

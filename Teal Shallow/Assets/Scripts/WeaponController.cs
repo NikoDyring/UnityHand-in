@@ -36,30 +36,13 @@ namespace Assets.Scripts
         public void FireWeapon(Weapon weapon)
         {
             nextShot = Time.time + 1f / weapon.fireRate;
-            switch (weapon.id)
-            {
-                case 1:
-                    audio.clip = weapon.shotSound;
-                    audio.Play();
-                    bullet = Instantiate(weapon.bulletPrefab, muzzleEnd.position, muzzleEnd.rotation);
-                    rb2d = bullet.GetComponent<Rigidbody2D>();
-                    rb2d.AddForce(muzzleEnd.up * bulletForce, ForceMode2D.Impulse);
-                    break;
-                case 2:
-                    audio.clip = weapon.shotSound;
-                    audio.Play();
-                    bullet = Instantiate(weapon.bulletPrefab, muzzleEnd.position, muzzleEnd.rotation);
-                    rb2d = bullet.GetComponent<Rigidbody2D>();
-                    rb2d.AddForce(muzzleEnd.up * bulletForce, ForceMode2D.Impulse);
-                    break;
-                case 3:
-                    audio.clip = weapon.shotSound;
-                    audio.Play();
-                    bullet = Instantiate(weapon.bulletPrefab, muzzleEnd.position, muzzleEnd.rotation);
-                    rb2d = bullet.GetComponent<Rigidbody2D>();
-                    rb2d.AddForce(muzzleEnd.up * bulletForce, ForceMode2D.Impulse);
-                    break;
-            }
+
+            audio.clip = weapon.shotSound;
+            audio.Play();
+            bullet = Instantiate(weapon.bulletPrefab, muzzleEnd.position, muzzleEnd.rotation);
+            rb2d = bullet.GetComponent<Rigidbody2D>();
+            rb2d.AddForce(muzzleEnd.up * bulletForce, ForceMode2D.Impulse);
+
             weapon.currentAmmo -= 1;
         }
 
