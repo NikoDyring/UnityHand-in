@@ -14786,5 +14786,25 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6828354274712868712}
+    - target: {fileID: 7062994345610243916, guid: ad446b04ac4078b499f057120eafae1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062994345610243916, guid: ad446b04ac4078b499f057120eafae1c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062994345610243916, guid: ad446b04ac4078b499f057120eafae1c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062994345610243916, guid: ad446b04ac4078b499f057120eafae1c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad446b04ac4078b499f057120eafae1c, type: 3}
